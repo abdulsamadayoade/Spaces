@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spaces - Find Spaces Online</title>
+    <link rel="stylesheet" href="fonts/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left-col">
+            <a href="#" class="logo">Spaces</a>
+            <div class="content">
+                <h1>Find Co-working Spaces Online</h1>
+                <p>Spaces is the best place to find and book affordable and nice co-working spaces near you.</p>
+                <button class="btn">Learn More</button>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="slider">
+                <img src="img/pic2.jpg" alt="space" id="slide">
+            </div>
+            <div class="slider-content">
+                <h2>How can I locate spaces that match my needs?</h2>
+                <hr>
+                <p>Co-working spaces listed on our platform are furnished with state of the art facilities. You also get
+                    access to unlimited power supply, coffee or tea, snacks and other perks you can think of.</p>
+                <div class="controller">
+                    <i class="fas fa-arrow-left" id="prevBtn"></i>
+                    <div class="vertical-line"></div>
+                    <i class="fas fa-arrow-right" id="nextBtn"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slide = document.getElementById("slide");
+        var prevBtn = document.getElementById("prevBtn");
+        var nextBtn = document.getElementById("nextBtn");
+
+        var slideimages = new Array(
+            "img/pic2.jpg",
+            "img/pic3.jpg",
+            "img/pic1.jpg",
+        );
+
+        let i = 0;
+
+        nextBtn.onclick = function () {
+            if (i < 2) {
+                slide.src = slideimages[i + 1];
+                i++;
+            }
+
+        }
+
+        prevBtn.onclick = function () {
+            if (i > 0) {
+                slide.src = slideimages[i - 1];
+                i--;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
